@@ -1,12 +1,14 @@
 {% load static %}
 <link rel="stylesheet" href ="{% static 'style.css' %}">
 
-<h1>Input your text below:</h1>
-
-<form method="POST" action= "counter">
-  {% csrf_token %}
-    <textarea name ="text" rows="20" cols="100"></textarea><br>
-    <input type="submit"/>
-
-</form>
-  
+<body>
+    <div class="container">
+        <h1 class="title">Word Counter</h1>
+        <form action="{% url 'counter' %}" method="post">
+            {% csrf_token %}
+            <textarea name="text" id="inputText" placeholder="Enter your text here..."></textarea>
+            <button type="submit" class="btn">Count Words</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,25 +1,13 @@
 {% load static %}
 <link rel="stylesheet" href ="{% static 'style.css' %}">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Counter</title>
-    <style>
-        body {
-            text-align: center; /* Center align text within the body */
-        }
-        .content {
-            margin-top: 100px; /* Add margin space from the top */
-        }
-    </style>
-</head>
 <body>
-    <div class="content">
-        <h1>The amount of words is {{ amount }}</h1>
+    <div class="container">
+        <h1 class="title">Word Count Result</h1>
+        <div class="result">
+            <p class="count">Word Count: {{ amount }}</p>
+        </div>
+        <a href="/" class="button">Back to Home</a>
     </div>
-    <button onclick="window.location.href='/'">Go to Home</button>
 </body>
-</html>
+
